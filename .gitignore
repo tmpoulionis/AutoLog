@@ -1,0 +1,6 @@
+.python-version
+.venv
+main.py
+uv.lock
+CLAUDE.md
+.env
