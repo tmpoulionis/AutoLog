@@ -1,0 +1,2 @@
+[console_scripts]
+autolog = autolog.cli.main:main

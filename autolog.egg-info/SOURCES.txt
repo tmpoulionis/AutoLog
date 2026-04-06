@@ -5,9 +5,17 @@ autolog/test_model.py
 autolog.egg-info/PKG-INFO
 autolog.egg-info/SOURCES.txt
 autolog.egg-info/dependency_links.txt
+autolog.egg-info/entry_points.txt
 autolog.egg-info/requires.txt
 autolog.egg-info/top_level.txt
 autolog/agent/__init__.py
 autolog/agent/agent.py
 autolog/agent/backend.py
 autolog/agent/prompts.py
+autolog/cli/__init__.py
+autolog/cli/main.py
+autolog/cli/test_main.py
+autolog/storage/__init__.py
+autolog/storage/embedder.py
+autolog/storage/log_store.py
+autolog/storage/vector_store.py
