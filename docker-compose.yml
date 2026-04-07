@@ -18,6 +18,7 @@ services:
     volumes:
       - .:/workspace
     working_dir: /workspace
+    user: "${UID}:${GID}"
     stdin_open: true
     tty: true
     deploy:
