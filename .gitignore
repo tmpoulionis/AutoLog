@@ -4,3 +4,4 @@ main.py
 uv.lock
 CLAUDE.md
 .env
+autolog.egg-info

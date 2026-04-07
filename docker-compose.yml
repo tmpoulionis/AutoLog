@@ -1,0 +1,29 @@
+# WSL / Linux — NVIDIA GPU
+# Usage:
+#   docker compose build          # first time, or after Dockerfile changes
+#   docker compose up -d          # start container in background
+#   docker compose exec autolog bash   # attach shell
+#   exit                          # detach (container keeps running)
+#   docker compose down           # stop at end of day
+#
+# Git: push/pull from the HOST, not inside the container.
+# Claude Code: run on the HOST — edits sync live into the container via bind mount.
+
+services:
+  autolog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autolog
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
