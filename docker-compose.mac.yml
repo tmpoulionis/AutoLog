@@ -1,14 +1,3 @@
-# macOS — CPU only (Docker Desktop on Mac has no GPU passthrough)
-# Usage:
-#   docker compose -f docker-compose.mac.yml build
-#   docker compose -f docker-compose.mac.yml up -d
-#   docker compose -f docker-compose.mac.yml exec autolog bash
-#   exit
-#   docker compose -f docker-compose.mac.yml down
-#
-# Git: push/pull from the HOST, not inside the container.
-# Claude Code: run on the HOST — edits sync live into the container via bind mount.
-
 services:
   autolog:
     build:
